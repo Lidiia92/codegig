@@ -5,7 +5,7 @@ const path = require('path');
 const db = require('./config/db.js');
 
 const app = express();
-
+app.use( bodyParser.json());
 //Home route
 app.get('/', (req, res) => {
     return res.send("Test");
