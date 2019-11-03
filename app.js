@@ -6,10 +6,14 @@ const db = require('./config/db.js');
 
 const app = express();
 
-//Routes
+//Home route
 app.get('/', (req, res) => {
     return res.send("Test");
 })
+
+//Gig routes
+app.use('/gigs', require('./routes/gigs.js'));
+
 
 //Test DB Connection
 db.authenticate()
